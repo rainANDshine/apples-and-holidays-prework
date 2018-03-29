@@ -6,7 +6,7 @@ def second_supply_for_fourth_of_july(holiday_hash)
   holiday_hash.each do |key1, value1|
     if key1 == :summer
       value1.each do |key2, value2|
-        if key2 == ":fourth_of_july"
+        if key2 == :fourth_of_july
           supply = value2[1]
         end
       end
