@@ -1,13 +1,19 @@
 require 'pry'
 
 def second_supply_for_fourth_of_july(holiday_hash)
+  supply = nil
+  
   holiday_hash.each do |key1, value1|
     if key1 == :summer
       value1.each do |key2, value2|
-        if key2 == ""
+        if key2 == ":fourth_of_july"
+          supply = value2[1]
+        end
       end
     end
   end
+  
+  supply
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
