@@ -17,10 +17,16 @@ def second_supply_for_fourth_of_july(holiday_hash)
 end
 
 def add_supply_to_winter_holidays(holiday_hash, supply)
-  # holiday_hash is identical to the one above
-  # add the second argument, which is a supply, to BOTH the
-  # Christmas AND the New Year's arrays
-
+  holiday_hash.each do |key1, value1|
+    if key1 == :winter
+      value1.each do |key2, value2|
+          value2 << supply
+        end
+      end
+    end
+  end
+  
+  holiday_hash
 end
 
 
